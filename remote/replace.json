@@ -25,6 +25,16 @@
     "newValue":    ""
   },
   {
+    "comment":     "Telemetry uses #ifdef & #else to define preferences. Since we remove preprocessing, remove one of the set values",
+    "searchValue": "^.*\"toolkit.telemetry.enabledPreRelease\".*$",
+    "newValue":    ""
+  },
+  {
+    "comment":     "XXX: Removes a lone 'null,' from the previously removed #else clause (https://mxr.mozilla.org/mozilla-central/source/mobile/android/chrome/content/browser.js?rev=14207ffc2b2f#5316).",
+    "searchValue": "^[ ]+null,$",
+    "newValue":    ""
+  },
+  {
     "comment":     "Replace chrome URIs with remote URLs to be bootstrapped. The string '%path%' will be replaced with the bootstrap path.",
     "searchValue": "chrome://browser/content/",
     "newValue":    "%path%content/"
