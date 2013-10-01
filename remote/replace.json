@@ -11,7 +11,12 @@
   },
   {
     "comment":     "Remove preprocessing directives.",
-    "searchValue": "^#(ifdef|endif).*$",
+    "searchValue": "^#filter substitution.*$",
+    "newValue":    ""
+  },
+  {
+    "comment":     "Remove preprocessing directives.",
+    "searchValue": "^#(ifdef|else|endif).*$",
     "newValue":    ""
   },
   {
